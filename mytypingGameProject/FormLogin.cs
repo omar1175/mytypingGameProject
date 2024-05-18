@@ -25,7 +25,7 @@ namespace mytypingGameProject
             }
             else
             {
-                MessageBox.Show("Your Account has been successfully created", "Regisration succsess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Your have been logged in successfully", "Regisration succsess", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 new Form1().Show();
                 this.Hide();
             }
