@@ -38,8 +38,9 @@
             this.label_score = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.trial_label = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.label_accuracy = new System.Windows.Forms.Label();
+            this.label_speed = new System.Windows.Forms.Label();
             this.panel_test.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             this.panel_test.Controls.Add(this.label_char_test);
             this.panel_test.Location = new System.Drawing.Point(2, 0);
             this.panel_test.Name = "panel_test";
-            this.panel_test.Size = new System.Drawing.Size(955, 515);
+            this.panel_test.Size = new System.Drawing.Size(1287, 462);
             this.panel_test.TabIndex = 0;
             this.panel_test.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -68,7 +69,7 @@
             // start_btn
             // 
             this.start_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.start_btn.Location = new System.Drawing.Point(399, 548);
+            this.start_btn.Location = new System.Drawing.Point(673, 614);
             this.start_btn.Name = "start_btn";
             this.start_btn.Size = new System.Drawing.Size(136, 39);
             this.start_btn.TabIndex = 1;
@@ -79,7 +80,7 @@
             // stop_btn
             // 
             this.stop_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stop_btn.Location = new System.Drawing.Point(569, 548);
+            this.stop_btn.Location = new System.Drawing.Point(833, 614);
             this.stop_btn.Name = "stop_btn";
             this.stop_btn.Size = new System.Drawing.Size(136, 39);
             this.stop_btn.TabIndex = 2;
@@ -90,7 +91,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(763, 548);
+            this.button1.Location = new System.Drawing.Point(993, 614);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 39);
             this.button1.TabIndex = 3;
@@ -100,11 +101,10 @@
             // 
             // label_score
             // 
-            this.label_score.AutoSize = true;
-            this.label_score.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_score.Location = new System.Drawing.Point(32, 555);
+            this.label_score.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_score.Location = new System.Drawing.Point(29, 516);
             this.label_score.Name = "label_score";
-            this.label_score.Size = new System.Drawing.Size(78, 25);
+            this.label_score.Size = new System.Drawing.Size(141, 31);
             this.label_score.TabIndex = 1;
             this.label_score.Text = "score: ";
             // 
@@ -120,27 +120,38 @@
             this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // trial_label
-            // 
-            this.trial_label.AutoSize = true;
-            this.trial_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trial_label.Location = new System.Drawing.Point(208, 555);
-            this.trial_label.Name = "trial_label";
-            this.trial_label.Size = new System.Drawing.Size(77, 25);
-            this.trial_label.TabIndex = 4;
-            this.trial_label.Text = "trials : ";
-            // 
             // gameTimer
             // 
             this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
+            // 
+            // label_accuracy
+            // 
+            this.label_accuracy.AutoSize = true;
+            this.label_accuracy.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_accuracy.Location = new System.Drawing.Point(29, 579);
+            this.label_accuracy.Name = "label_accuracy";
+            this.label_accuracy.Size = new System.Drawing.Size(168, 29);
+            this.label_accuracy.TabIndex = 5;
+            this.label_accuracy.Text = "Accuracy: 0%";
+            // 
+            // label_speed
+            // 
+            this.label_speed.AutoSize = true;
+            this.label_speed.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_speed.Location = new System.Drawing.Point(29, 638);
+            this.label_speed.Name = "label_speed";
+            this.label_speed.Size = new System.Drawing.Size(104, 29);
+            this.label_speed.TabIndex = 6;
+            this.label_speed.Text = "Speed: ";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(957, 619);
-            this.Controls.Add(this.trial_label);
+            this.ClientSize = new System.Drawing.Size(1202, 700);
+            this.Controls.Add(this.label_speed);
+            this.Controls.Add(this.label_accuracy);
             this.Controls.Add(this.panel_test);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label_score);
@@ -164,9 +175,10 @@
         private System.Windows.Forms.Button stop_btn;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ImageList imageList2;
-        private System.Windows.Forms.Label trial_label;
         private System.Windows.Forms.Label label_char_test;
         private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Label label_accuracy;
+        private System.Windows.Forms.Label label_speed;
     }
 }
 
