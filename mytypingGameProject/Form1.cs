@@ -168,6 +168,7 @@ namespace mytypingGameProject
                     lbl.Text = GetRandomCharater().ToString();
                 }
             }
+            UpdateTypingSpeed();
         } //***************************************************
 
         //*************** choose character *************************
@@ -228,6 +229,7 @@ namespace mytypingGameProject
         private void Form1_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             Form1_KeyPress(sender, e);
+            UpdateTypingSpeed();
         }
 
         private void UpdateAccuracy()
@@ -238,6 +240,7 @@ namespace mytypingGameProject
                 accuracy = (double)correctKeyPresses / totalKeyPresses * 100;
             }
             label_accuracy.Text = $"Accuracy: {accuracy:F2}%";
+
         }
         private void StyleButtons()
         {
@@ -268,5 +271,25 @@ namespace mytypingGameProject
             new FormLogin().Show();
             this.Hide();
         }
+        private void UpdateTypingSpeed()
+        {
+            // Calculate typing speed
+            if (totalKeyPresses > 0)
+            {
+                endTime = DateTime.Now;
+                TimeSpan timeTaken = endTime - startTime;
+                double minutesTaken = timeTaken.TotalMinutes;
+                typingSpeed = correctKeyPresses / minutesTaken; // Characters per minute (CPM)
+            }
+            else
+            {
+                // If no key has been pressed, reduce the typing speed by a certain factor
+                typingSpeed *= 0.9; // You can adjust the factor as needed
+            }
+
+            // Display typing speed
+            label_speed.Text = $"Typing Speed: {typingSpeed:F2} CPM";
+        }
+
     }
 }
