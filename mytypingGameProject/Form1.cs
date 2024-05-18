@@ -257,7 +257,16 @@ namespace mytypingGameProject
             button1.Font = new Font("Arial", 12, FontStyle.Bold); // Bold Arial font, size 12
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+            new FormScoreboard().Show();
+            this.Hide();
+        }
 
-
+        private void labelBackLogout_Click(object sender, EventArgs e)
+        {
+            new FormLogin().Show();
+            this.Hide();
+        }
     }
 }
