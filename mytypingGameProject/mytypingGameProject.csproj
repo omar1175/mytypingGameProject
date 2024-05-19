@@ -74,6 +74,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -118,6 +119,69 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\vecteezy_red-heart-in-pixel-art-style-8-bit-icon-valentine-s-day_56448801.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_7.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rr.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dd.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dfd.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_10.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dd1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new8.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new9.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new10.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new11.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new12.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\final.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

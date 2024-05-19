@@ -12,7 +12,7 @@ namespace mytypingGameProject
 {
     public partial class Form1 : Form
     {
-        long score = 0;
+        long score = 0; int topDistance=2;
         int totalKeyPresses = 0;
         int correctKeyPresses = 0;
         private List<Label> labels = new List<Label>();
@@ -63,9 +63,9 @@ namespace mytypingGameProject
             label_accuracy.Text = "Accuracy: 0%";
 
             // Add label to display typing speed
-            StyleLabel(label_speed);
+            //StyleLabel(label_speed);
             label_speed.Text = "Typing Speed: -- CPM"; // Initial value
-            label_speed.Location = new Point(panel_test.Left, label_accuracy.Bottom + 10);
+           // label_speed.Location = new Point(panel_test.Left, label_accuracy.Bottom + 10);
             this.Controls.Add(label_speed);
         }
 
@@ -74,10 +74,11 @@ namespace mytypingGameProject
         {
             StyleInfoLabel(label_score);
             StyleInfoLabel(label_accuracy);
-
+            StyleInfoLabel(label_speed);
+            StyleInfoLabel(themes_label);
             // Position the labels below the panel
-            label_score.Location = new Point(panel_test.Left, panel_test.Bottom + 10);
-            label_accuracy.Location = new Point(panel_test.Left, label_score.Bottom + 10);
+            //label_score.Location = new Point(panel_test.Left, panel_test.Bottom + 10);
+            // label_accuracy.Location = new Point(panel_test.Left, label_score.Bottom + 10);
         }
 
         // Apply the same styling to the original label
@@ -159,7 +160,7 @@ namespace mytypingGameProject
         {
             foreach (Label lbl in labels)
             {
-                lbl.Top += 5;
+                lbl.Top += topDistance; 
                 if (lbl.Top >= panel_test.Height)
                 {
                     score -= 5;
@@ -248,16 +249,47 @@ namespace mytypingGameProject
             start_btn.BackColor = Color.FromArgb(52, 152, 219); // Blue background color
             start_btn.ForeColor = Color.White; // White text color
             start_btn.Font = new Font("Arial", 12, FontStyle.Bold); // Bold Arial font, size 12
+            level_1_btn.Font = new Font("Arial", 12, FontStyle.Bold);
+            level_1_btn.ForeColor = Color.White;
+            level_1_btn.BackColor = Color.FromArgb(52, 152, 219);
+
+
+            // Create buttons (assuming you have buttons created in your form, otherwise you need to create them)
+            // Example:
+            // Button button2 = new Button();
+            // Button button3 = new Button();
+            // ...
+            StyleButton(theme1);
+            StyleButton(button2);
+            StyleButton(button3);
+            StyleButton(button4);
+            StyleButton(button5);
+            StyleButton(button6);
+            StyleButton(button7);
+            StyleButton(button8);
+            StyleButton(button9);
+            StyleButton(button10);
+            StyleButton(button11);
+            StyleButton(button12);
+
 
             // Style for stop_btn
             stop_btn.BackColor = Color.FromArgb(231, 76, 60); // Red background color
             stop_btn.ForeColor = Color.White; // White text color
             stop_btn.Font = new Font("Arial", 12, FontStyle.Bold); // Bold Arial font, size 12
+            level_2_btn.BackColor = Color.FromArgb(231, 76, 60);
+            level_2_btn.ForeColor = Color.White;
+            level_2_btn.Font = new Font("Arial", 12, FontStyle.Bold); // Bold Arial font, size 12
 
             // Style for button1
             button1.BackColor = Color.FromArgb(46, 204, 113); // Green background color
             button1.ForeColor = Color.White; // White text color
-            button1.Font = new Font("Arial", 12, FontStyle.Bold); // Bold Arial font, size 12
+            button1.Font = new Font("Arial", 12, FontStyle.Bold);
+            level_3_btn.BackColor = Color.FromArgb(46, 204, 113);
+            level_3_btn.ForeColor = Color.White;
+            level_3_btn.Font = new Font("Arial", 12, FontStyle.Bold);
+
+            // Bold Arial font, size 12
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -271,6 +303,22 @@ namespace mytypingGameProject
             new FormLogin().Show();
             this.Hide();
         }
+
+        private void level_1_btn_Click(object sender, EventArgs e)
+        {
+            topDistance = 3;
+        }
+
+        private void level_2_btn_Click(object sender, EventArgs e)
+        {
+            topDistance = 5;
+        }
+
+        private void level_3_btn_Click(object sender, EventArgs e)
+        {
+            topDistance = 8;
+        }
+
         private void UpdateTypingSpeed()
         {
             // Calculate typing speed
@@ -291,5 +339,91 @@ namespace mytypingGameProject
             label_speed.Text = $"Typing Speed: {typingSpeed:F2} CPM";
         }
 
+        public void StyleButton(Button button)
+        {
+            button.BackColor = Color.DodgerBlue; // Initial background color
+            button.ForeColor = Color.White; // Text color
+            button.Font = new Font("Arial", 12, FontStyle.Bold);
+            button.FlatStyle = FlatStyle.Flat; // Flat style for a modern look
+            button.FlatAppearance.BorderSize = 0; // Remove border
+            button.Cursor = Cursors.Hand; // Change cursor to hand when hovering
+
+            // Handle the MouseEnter and MouseLeave events to create a hover effect
+            button.MouseEnter += (s, e) =>
+            {
+                button.BackColor = Color.RoyalBlue; // Change to hover color
+            };
+
+            button.MouseLeave += (s, e) =>
+            {
+                button.BackColor = Color.DodgerBlue; // Restore original color
+            };
+        }
+        private void theme1_Click(object sender, EventArgs e)
+        {
+            panel_test.BackgroundImage = Properties.Resources.Frame1;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panel_test.BackgroundImage = Properties.Resources.Capture1;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel_test.BackgroundImage = Properties.Resources.Frame2;
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            panel_test.BackgroundImage = Properties.Resources._8;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            panel_test.BackgroundImage = Properties.Resources.s;
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panel_test.BackgroundImage = Properties.Resources.dd1;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            panel_test.BackgroundImage = Properties.Resources.dfd;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            panel_test.BackgroundImage = Properties.Resources.red;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            panel_test.BackgroundImage = Properties.Resources.new8;
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            panel_test.BackgroundImage = Properties.Resources.new9;
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            panel_test.BackgroundImage = Properties.Resources.new11;
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            panel_test.BackgroundImage = Properties.Resources.final;
+
+        }
     }
 }
