@@ -19,7 +19,7 @@ namespace mytypingGameProject
 
         private void labelShowScoreboard_Click(object sender, EventArgs e)
         {
-            new FormStart().Show();
+            new Form1().Show();
             this.Hide();
         }
     }

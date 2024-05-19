@@ -42,7 +42,7 @@ namespace mytypingGameProject
             else
             {
                 MessageBox.Show("Your Account has been successfully created", "Regisration succsess", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                new FormStart().Show();
+                new Form1().Show();
                 this.Hide();
             }
         }
