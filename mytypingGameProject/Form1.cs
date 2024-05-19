@@ -268,7 +268,7 @@ namespace mytypingGameProject
 
         private void labelBackLogout_Click(object sender, EventArgs e)
         {
-            new FormLogin().Show();
+            new FormStart().Show();
             this.Hide();
         }
         private void UpdateTypingSpeed()

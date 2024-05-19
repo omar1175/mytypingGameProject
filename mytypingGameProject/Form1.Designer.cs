@@ -40,8 +40,7 @@
             this.label_accuracy = new System.Windows.Forms.Label();
             this.label_speed = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelShowScoreboard = new System.Windows.Forms.Label();
-            this.labelBackLogout = new System.Windows.Forms.Label();
+            this.labelBack1 = new System.Windows.Forms.Label();
             this.panel_test = new System.Windows.Forms.Panel();
             this.label_char_test = new System.Windows.Forms.Label();
             this.panel_test.SuspendLayout();
@@ -51,7 +50,7 @@
             // 
             this.start_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.start_btn.Location = new System.Drawing.Point(505, 499);
-            this.start_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.start_btn.Margin = new System.Windows.Forms.Padding(2);
             this.start_btn.Name = "start_btn";
             this.start_btn.Size = new System.Drawing.Size(102, 32);
             this.start_btn.TabIndex = 1;
@@ -63,7 +62,7 @@
             // 
             this.stop_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stop_btn.Location = new System.Drawing.Point(625, 499);
-            this.stop_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.stop_btn.Margin = new System.Windows.Forms.Padding(2);
             this.stop_btn.Name = "stop_btn";
             this.stop_btn.Size = new System.Drawing.Size(102, 32);
             this.stop_btn.TabIndex = 2;
@@ -75,7 +74,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(745, 499);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 32);
             this.button1.TabIndex = 3;
@@ -140,31 +139,18 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "label1";
             // 
-            // labelShowScoreboard
+            // labelBack1
             // 
-            this.labelShowScoreboard.AutoSize = true;
-            this.labelShowScoreboard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelShowScoreboard.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelShowScoreboard.ForeColor = System.Drawing.Color.Blue;
-            this.labelShowScoreboard.Location = new System.Drawing.Point(709, 569);
-            this.labelShowScoreboard.Name = "labelShowScoreboard";
-            this.labelShowScoreboard.Size = new System.Drawing.Size(122, 19);
-            this.labelShowScoreboard.TabIndex = 8;
-            this.labelShowScoreboard.Text = "Show Scoreboard ";
-            this.labelShowScoreboard.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // labelBackLogout
-            // 
-            this.labelBackLogout.AutoSize = true;
-            this.labelBackLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelBackLogout.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBackLogout.ForeColor = System.Drawing.Color.Blue;
-            this.labelBackLogout.Location = new System.Drawing.Point(52, 569);
-            this.labelBackLogout.Name = "labelBackLogout";
-            this.labelBackLogout.Size = new System.Drawing.Size(53, 19);
-            this.labelBackLogout.TabIndex = 9;
-            this.labelBackLogout.Text = "Logout";
-            this.labelBackLogout.Click += new System.EventHandler(this.labelBackLogout_Click);
+            this.labelBack1.AutoSize = true;
+            this.labelBack1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelBack1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBack1.ForeColor = System.Drawing.Color.Blue;
+            this.labelBack1.Location = new System.Drawing.Point(35, 569);
+            this.labelBack1.Name = "labelBack1";
+            this.labelBack1.Size = new System.Drawing.Size(38, 19);
+            this.labelBack1.TabIndex = 9;
+            this.labelBack1.Text = "Back";
+            this.labelBack1.Click += new System.EventHandler(this.labelBackLogout_Click);
             // 
             // panel_test
             // 
@@ -196,8 +182,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(902, 597);
-            this.Controls.Add(this.labelBackLogout);
-            this.Controls.Add(this.labelShowScoreboard);
+            this.Controls.Add(this.labelBack1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label_speed);
             this.Controls.Add(this.label_accuracy);
@@ -207,7 +192,7 @@
             this.Controls.Add(this.stop_btn);
             this.Controls.Add(this.start_btn);
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress_1);
             this.panel_test.ResumeLayout(false);
@@ -230,8 +215,7 @@
         private System.Windows.Forms.Label label_accuracy;
         private System.Windows.Forms.Label label_speed;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelShowScoreboard;
-        private System.Windows.Forms.Label labelBackLogout;
+        private System.Windows.Forms.Label labelBack1;
     }
 }
 
