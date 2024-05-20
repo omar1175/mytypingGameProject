@@ -413,7 +413,7 @@ namespace mytypingGameProject
             panel_test.BackgroundImage = Properties.Resources.new9;
 
         }
-
+        
         private void button11_Click(object sender, EventArgs e)
         {
             panel_test.BackgroundImage = Properties.Resources.new11;
