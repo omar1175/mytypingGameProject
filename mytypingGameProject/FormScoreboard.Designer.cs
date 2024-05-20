@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelBackGame = new System.Windows.Forms.Label();
+            this.labelBack2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // labelBackGame
+            // labelBack2
             // 
-            this.labelBackGame.AutoSize = true;
-            this.labelBackGame.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelBackGame.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBackGame.ForeColor = System.Drawing.Color.Blue;
-            this.labelBackGame.Location = new System.Drawing.Point(12, 422);
-            this.labelBackGame.Name = "labelBackGame";
-            this.labelBackGame.Size = new System.Drawing.Size(121, 19);
-            this.labelBackGame.TabIndex = 9;
-            this.labelBackGame.Text = "Back to the game ";
-            this.labelBackGame.Click += new System.EventHandler(this.labelShowScoreboard_Click);
+            this.labelBack2.AutoSize = true;
+            this.labelBack2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelBack2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBack2.ForeColor = System.Drawing.Color.Blue;
+            this.labelBack2.Location = new System.Drawing.Point(21, 413);
+            this.labelBack2.Name = "labelBack2";
+            this.labelBack2.Size = new System.Drawing.Size(38, 19);
+            this.labelBack2.TabIndex = 9;
+            this.labelBack2.Text = "Back";
+            this.labelBack2.Click += new System.EventHandler(this.labelShowScoreboard_Click);
             // 
             // FormScoreboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.labelBackGame);
+            this.Controls.Add(this.labelBack2);
             this.Name = "FormScoreboard";
             this.Text = "FormScoreboard";
             this.ResumeLayout(false);
@@ -59,6 +59,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelBackGame;
+        private System.Windows.Forms.Label labelBack2;
     }
 }

@@ -425,5 +425,11 @@ namespace mytypingGameProject
             panel_test.BackgroundImage = Properties.Resources.final;
 
         }
+
+        private void labelBack1_Click(object sender, EventArgs e)
+        {
+            new FormStart().Show();
+            this.Hide();
+        }
     }
 }

@@ -26,7 +26,7 @@ namespace mytypingGameProject
             else
             {
                 MessageBox.Show("Your have been logged in successfully", "Regisration succsess", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                new Form1().Show();
+                new FormStart().Show();
                 this.Hide();
             }
         }
