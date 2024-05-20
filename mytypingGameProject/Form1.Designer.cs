@@ -59,6 +59,7 @@
             this.button12 = new System.Windows.Forms.Button();
             this.panel_test = new System.Windows.Forms.Panel();
             this.label_char_test = new System.Windows.Forms.Label();
+            this.labelBack1 = new System.Windows.Forms.Label();
             this.panel_test.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,7 +130,7 @@
             this.label_accuracy.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_accuracy.Location = new System.Drawing.Point(186, 601);
             this.label_accuracy.Name = "label_accuracy";
-            this.label_accuracy.Size = new System.Drawing.Size(168, 29);
+            this.label_accuracy.Size = new System.Drawing.Size(136, 24);
             this.label_accuracy.TabIndex = 5;
             this.label_accuracy.Text = "Accuracy: 0%";
             // 
@@ -139,7 +140,7 @@
             this.label_speed.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_speed.Location = new System.Drawing.Point(423, 601);
             this.label_speed.Name = "label_speed";
-            this.label_speed.Size = new System.Drawing.Size(104, 29);
+            this.label_speed.Size = new System.Drawing.Size(83, 24);
             this.label_speed.TabIndex = 6;
             this.label_speed.Text = "Speed: ";
             // 
@@ -152,7 +153,7 @@
             this.labelShowScoreboard.Location = new System.Drawing.Point(656, 744);
             this.labelShowScoreboard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelShowScoreboard.Name = "labelShowScoreboard";
-            this.labelShowScoreboard.Size = new System.Drawing.Size(158, 23);
+            this.labelShowScoreboard.Size = new System.Drawing.Size(122, 19);
             this.labelShowScoreboard.TabIndex = 8;
             this.labelShowScoreboard.Text = "Show Scoreboard ";
             this.labelShowScoreboard.Click += new System.EventHandler(this.label2_Click);
@@ -166,7 +167,7 @@
             this.labelBackLogout.Location = new System.Drawing.Point(513, 744);
             this.labelBackLogout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelBackLogout.Name = "labelBackLogout";
-            this.labelBackLogout.Size = new System.Drawing.Size(68, 23);
+            this.labelBackLogout.Size = new System.Drawing.Size(53, 19);
             this.labelBackLogout.TabIndex = 9;
             this.labelBackLogout.Text = "Logout";
             this.labelBackLogout.Click += new System.EventHandler(this.labelBackLogout_Click);
@@ -382,12 +383,26 @@
             this.label_char_test.TabIndex = 0;
             this.label_char_test.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelBack1
+            // 
+            this.labelBack1.AutoSize = true;
+            this.labelBack1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelBack1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBack1.ForeColor = System.Drawing.Color.Blue;
+            this.labelBack1.Location = new System.Drawing.Point(503, 659);
+            this.labelBack1.Name = "labelBack1";
+            this.labelBack1.Size = new System.Drawing.Size(38, 19);
+            this.labelBack1.TabIndex = 24;
+            this.labelBack1.Text = "Back";
+            this.labelBack1.Click += new System.EventHandler(this.labelBack1_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1203, 761);
+            this.ClientSize = new System.Drawing.Size(1203, 749);
+            this.Controls.Add(this.labelBack1);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
@@ -455,6 +470,7 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Label labelBack1;
     }
 }
 
